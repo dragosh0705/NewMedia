@@ -5,20 +5,13 @@
     <item
         android:id="@+id/History"
         android:enabled="true"
-        android:icon="@drawable/history"
-        app:showAsAction="always"/>
+        android:icon="@drawable/topnavi1_touched"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/Home"
         android:enabled="true"
-        android:icon="@drawable/home"
-        app:showAsAction="always"
-        />
-
-    <item
-        android:id="@+id/Mine"
-        android:enabled="true"
-        android:icon="@drawable/mine"
+        android:icon="@drawable/topnavi2_not_touched"
         app:showAsAction="always"/>
 
 </menu>

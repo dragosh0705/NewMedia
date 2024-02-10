@@ -15,6 +15,12 @@
         <activity android:name=".home"
             android:exported="false">
         </activity>
+        <activity android:name=".history1"
+            android:exported="false">
+        </activity>
+        <activity android:name=".history2"
+            android:exported="false">
+        </activity>
 
 
         <activity

@@ -6,19 +6,22 @@
         android:id="@+id/History"
         android:enabled="true"
         android:icon="@drawable/history"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        android:title="History" />
 
     <item
         android:id="@+id/Home"
         android:enabled="true"
         android:icon="@drawable/home"
         app:showAsAction="always"
+        android:title="Home"
         />
 
     <item
         android:id="@+id/Mine"
         android:enabled="true"
         android:icon="@drawable/mine"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        android:title="Mine"/>
 
 </menu>

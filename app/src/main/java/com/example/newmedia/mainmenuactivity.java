@@ -2,7 +2,6 @@ package com.example.newmedia;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Switch;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,27 +21,28 @@ public class mainmenuactivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.homepage);
 
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnItemSelectedListener(new ItemSelectedListner());
+
+        // Set the default fragment
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.Home, home).commit();
     }
 
-    class ItemSelectedListner implements NavigationBarView.OnItemSelectedListener{
+    class ItemSelectedListner implements NavigationBarView.OnItemSelectedListener {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-            switch(item.getItemId()){
+            switch (item.getItemId()) {
                 case R.id.Home:
-                    transaction.replace(R.id.bottomNavigationView, home).commitAllowingStateLoss();
-                    break;
+                    transaction.replace(R.id.Home, home).commit();
+                    return true;
                 case R.id.History:
-                        transaction.replace(R.id.bottomNavigationView, history).commitAllowingStateLoss();
-                        break;
+                    transaction.replace(R.id.History, history).commit();
+                    return true;
             }
-            return true;
+            return false;
         }
-
-
     }
 }

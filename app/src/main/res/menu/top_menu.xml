@@ -6,12 +6,14 @@
         android:id="@+id/History"
         android:enabled="true"
         android:icon="@drawable/topnavi1_touched"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:title="ListView"/>
 
     <item
         android:id="@+id/Home"
         android:enabled="true"
         android:icon="@drawable/topnavi2_not_touched"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        android:title="GridView"/>
 
 </menu>

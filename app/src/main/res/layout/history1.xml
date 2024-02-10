@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="90dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/topNavigationView"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,29 +23,14 @@
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="@+id/view1"
         app:layout_constraintStart_toStartOf="@id/view1"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginStart="150dp" />
 
-    <LinearLayout
-        android:id="@+id/toplinearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view1"
-        >
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" />
-    </LinearLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/topNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -52,46 +40,55 @@
         app:itemBackground="@android:color/white"
         />
 
+
+
     <ListView
         android:id="@+id/dailylistview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/topNavigationView"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
-
-
-    <EditText
-        android:id="@+id/storyedittext"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:hint="Add a history"
-        app:layout_constraintBottom_toTopOf="@+id/topNavigationView"
-        android:background="#F8F8F8"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="10dp"/>
-
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:background="@drawable/camera"
-        app:layout_constraintLeft_toRightOf="@id/storyedittext"
-        app:layout_constraintBottom_toTopOf="@+id/topNavigationView"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_height="0dp"
+        android:dividerHeight="0px"
+        android:divider="#FFFFFF"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/topNavigationView"
+        app:layout_constraintBottom_toTopOf="@id/storyedittext"
         />
 
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/topNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_menu"
-        app:itemBackground="@android:color/white"
-        />
+
+
+
+
+        <EditText
+            android:id="@+id/storyedittext"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:hint="Add a history"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="@drawable/camera"
+            app:layout_constraintLeft_toRightOf="@id/storyedittext"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_menu"
+            app:itemBackground="@android:color/white"
+            />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

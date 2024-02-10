@@ -9,15 +9,17 @@ public class history2 extends AppCompatActivity {
 
     GridView gridView;
 
-    String[] dailytext = {"sample", "sample", "sample", "sample", "sample"};
-    int[] dailyimg = {R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img};
+
+    String[] dailytext = {"sample1", "sample", "sample", "sample", "sample", "sample", "sample", "sample", "sample9"};
+    int[] dailyimg = {R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img};
+    String[] timetext = {"sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample PM"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.history2);
-
-        gridview_adapter gridadater = new gridview_adapter(history2.this, dailytext, dailyimg);
+        gridView = findViewById(R.id.dailygridview);
+        gridview_adapter gridadater = new gridview_adapter(history2.this, dailytext, dailyimg, timetext);
         gridView.setAdapter(gridadater);
     }
 

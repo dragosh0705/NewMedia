@@ -10,49 +10,50 @@ import android.widget.TextView;
 
 public class gridview_adapter extends BaseAdapter {
 
-    Context context;
-    LayoutInflater inflater;
-    String[] arrdailytext;
-    int[] arrdailyimg;
+    private Context context;
+    private int[] dailyimg;
+    private String[] timetext;
+    private LayoutInflater inflater;
+    private String[] dailytext;
 
-    public gridview_adapter(Context context, String[] arrdailytext, int[] arrdailyimg) {
 
-        this.context= context;
-        this.arrdailytext = arrdailytext;
-        this.arrdailyimg = arrdailyimg;
+
+    public gridview_adapter(Context context, String[] dailytext, int[] dailyimg, String[] timetext) {
+        this.context = context;
+        this.dailytext = dailytext;
+        this.dailyimg = dailyimg;
+        this.timetext = timetext;
+        inflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return arrdailytext.length;
+        return dailytext.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return arrdailytext[position];
+        return dailytext[position];
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
-        if (inflater == null) {
-            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        }
-
         if (view == null) {
-            view = inflater.inflate(R.layout.daily_grid_layout, null);
+            view = inflater.inflate(R.layout.daily_grid_layout, viewGroup, false);
+            TextView story = (TextView) view.findViewById(R.id.daily_text);
+            ImageView storyimg = (ImageView) view.findViewById(R.id.daily_image);
+            TextView storydate = (TextView) view.findViewById(R.id.daily_date);
+
+            story.setText(dailytext[position]);
+            storyimg.setImageResource(dailyimg[position]);
+            storydate.setText(timetext[position]);
+
         }
-
-        ImageView dailyimg = view.findViewById(R.id.daily_image);
-        TextView dailytext = view.findViewById(R.id.daily_text);
-
-        dailyimg.setImageResource(arrdailyimg[position]);
-        dailytext.setText(arrdailytext[position]);
-
         return view;
     }
 }

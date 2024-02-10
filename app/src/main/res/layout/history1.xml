@@ -45,50 +45,42 @@
     <ListView
         android:id="@+id/dailylistview"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="fill_parent"
+        app:layout_constraintHeight="match_constraint"
         android:dividerHeight="0px"
         android:divider="#FFFFFF"
-        app:layout_constraintVertical_weight="1"
         app:layout_constraintTop_toBottomOf="@id/topNavigationView"
         app:layout_constraintBottom_toTopOf="@id/storyedittext"
         />
 
+    <EditText
+        android:id="@+id/storyedittext"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:hint="Add a history"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:background="#F8F8F8"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"/>
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera"
+        app:layout_constraintLeft_toRightOf="@id/storyedittext"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        />
 
-
-
-
-
-        <EditText
-            android:id="@+id/storyedittext"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
-            android:hint="Add a history"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            android:background="#F8F8F8"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginStart="10dp"/>
-
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:background="@drawable/camera"
-            app:layout_constraintLeft_toRightOf="@id/storyedittext"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/bottom_menu"
-            app:itemBackground="@android:color/white"
-            />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu"
+        app:itemBackground="@android:color/white"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

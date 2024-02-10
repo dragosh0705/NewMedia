@@ -123,6 +123,7 @@
         app:layout_constraintTop_toBottomOf="@id/Degree"
         app:layout_constraintBottom_toTopOf="@+id/view1"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
         android:background="#C6C9CE"/>
 
     <TextView
@@ -173,6 +174,7 @@
         app:layout_constraintTop_toBottomOf="@id/view0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/view2"
+        android:layout_marginTop="5dp"
         android:background="#C6C9CE"/>
 
     <TextView
@@ -221,7 +223,7 @@
         app:layout_constraintTop_toBottomOf="@id/view1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/view3"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:background="#C6C9CE"/>
 
     <TextView
@@ -269,9 +271,8 @@
         android:layout_height="70dp"
         app:layout_constraintTop_toBottomOf="@id/view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@id/infobutton"
+        android:layout_marginTop="5dp"
         android:background="#C6C9CE"/>
 
     <TextView
@@ -316,13 +317,16 @@
 
 
     <ImageButton
+        android:id="@+id/infobutton"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:drawable="@drawable/infobutton"
         android:adjustViewBounds="true"
-        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="80dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf="@id/view3"
         />
 
 

@@ -13,7 +13,7 @@ public class history1 extends AppCompatActivity {
 
 
     String[] datetext = {"2023.12.03", "2023.12.07", "2023.12.10", "2023.12.13", "2023.12.15", "2023.12.20", "2023.12.30", "2023.12.31", "2024.01.01"};
-    String[] dailytext = {"I", "sample", "sample", "sample", "sample", "sample", "sample", "sample", "sample"};
+    String[] dailytext = {"I", "sample", "sample", "sample", "sample", "sample", "sample", "sample"};
     int[] dailyimg = {R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img, R.drawable.sample_img};
     String[] timetext = {"sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample AM", "sample PM"};
 

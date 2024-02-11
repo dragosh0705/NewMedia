@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!plant.isEmpty() || !fish.isEmpty()) {
-                    Intent intent = new Intent(getApplicationContext(), history1.class);
+                    Intent intent = new Intent(getApplicationContext(), MainMenuActivity.class);
                     startActivity(intent);
                 }
             }

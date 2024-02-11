@@ -22,6 +22,9 @@
         <activity android:name=".history2"
             android:exported="false">
         </activity>
+        <activity android:name=".MainMenuActivity"
+            android:exported="false">
+        </activity>
 
 
 

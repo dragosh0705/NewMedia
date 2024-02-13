@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".history1">
 
 
     <View
@@ -48,10 +49,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constrainedHeight="true"
-        android:dividerHeight="0px"
-        android:divider="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/storyedittext"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topNavigationView"
-        app:layout_constraintBottom_toTopOf="@id/storyedittext"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
     <EditText
@@ -82,11 +83,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         app:labelVisibilityMode="unlabeled"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:menu="@menu/bottom_menu"
-        app:itemBackground="@android:color/white"
-        />
+        app:itemBackground="@android:color/white"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationView"/>
 
 
 

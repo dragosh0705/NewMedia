@@ -49,6 +49,7 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 
+
             <ImageView
                 android:id="@+id/listviewimg"
                 android:layout_width="80dp"

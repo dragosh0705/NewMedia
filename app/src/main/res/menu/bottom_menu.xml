@@ -7,9 +7,9 @@
         android:id="@+id/History"
         android:enabled="true"
         android:icon="@drawable/history"
-        tools:layout="@layout/history1"
         app:showAsAction="always"
-        android:title="History" />
+        android:title="History"
+        />
 
     <item
         android:id="@+id/Home"
@@ -17,7 +17,6 @@
         android:icon="@drawable/home"
         app:showAsAction="always"
         android:title="Home"
-        tools:layout="@layout/homepage"
         />
 
     <item

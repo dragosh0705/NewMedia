@@ -19,8 +19,8 @@ public class history2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.history2);
         gridView = findViewById(R.id.dailygridview);
-        gridview_adapter gridadater = new gridview_adapter(history2.this, dailytext, dailyimg, timetext);
-        gridView.setAdapter(gridadater);
+        gridview_adapter gridadapter = new gridview_adapter(history2.this, dailytext, dailyimg, timetext);
+        gridView.setAdapter(gridadapter);
     }
 
 }

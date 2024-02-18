@@ -50,7 +50,6 @@ public class listadapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if (convertView == null) {
             convertView = inflater.inflate(R.layout.daily_list_layout, parent, false);
             TextView date = (TextView) convertView.findViewById(R.id.date);
             TextView story = (TextView) convertView.findViewById(R.id.dailystory);
@@ -62,7 +61,6 @@ public class listadapter extends BaseAdapter {
             storyimg.setImageResource(dailyimg[position]);
             storytime.setText(timetext[position]);
 
-        }
 
 
         return convertView;

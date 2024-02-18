@@ -6,26 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.core.content.res.ResourcesCompat;
-
-import org.w3c.dom.Text;
+import java.util.ArrayList;
 
 public class listadapter extends BaseAdapter {
     private Context context;
-    private String[] dailytext;
-    private int[] dailyimg;
-    private String[] timetext;
+    private ArrayList<String> dailystory;
+    private ArrayList<Integer> dailyimg;
+    private ArrayList<String> timetext;
     private LayoutInflater inflater;
-    private String[] datetext;
+    private ArrayList<String> datetext;
 
 
 
-    public listadapter(Context context, String[] datetext, String[] dailytext, int[] dailyimg, String[] timetext) {
+    public listadapter(Context context, ArrayList<String> datetext, ArrayList<String> dailystory, ArrayList<Integer> dailyimg, ArrayList<String> timetext) {
         this.context = context;
-        this.dailytext = dailytext;
+        this.dailystory = dailystory;
         this.dailyimg = dailyimg;
         this.timetext = timetext;
         this.datetext = datetext;
@@ -34,12 +31,12 @@ public class listadapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return dailytext.length;
+        return dailystory.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return datetext[position];
+        return dailystory.get(position);
     }
 
     @Override
@@ -56,10 +53,10 @@ public class listadapter extends BaseAdapter {
             ImageView storyimg = (ImageView) convertView.findViewById(R.id.listviewimg);
             TextView storytime = (TextView) convertView.findViewById(R.id.time);
 
-            date.setText(datetext[position]);
-            story.setText(dailytext[position]);
-            storyimg.setImageResource(dailyimg[position]);
-            storytime.setText(timetext[position]);
+            date.setText(datetext.get(position));
+            story.setText(dailystory.get(position));
+            storyimg.setImageResource(dailyimg.get(position));
+            storytime.setText(timetext.get(position));
 
 
 

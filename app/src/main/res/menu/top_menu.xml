@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/History"
+        android:id="@+id/List"
         android:enabled="true"
         android:icon="@drawable/topnavi1_touched"
         app:showAsAction="always"
         android:title="ListView"/>
 
     <item
-        android:id="@+id/Home"
+        android:id="@+id/Grid"
         android:enabled="true"
         android:icon="@drawable/topnavi2_not_touched"
         app:showAsAction="always"

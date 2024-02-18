@@ -11,10 +11,10 @@
     <View
         android:id="@+id/view1"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="70dp"
         android:backgroundTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/topNavigationView"/>
+        app:layout_constraintBottom_toTopOf="@id/listview"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,29 +31,19 @@
 
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/topNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constrainedHeight="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view1"
-        app:menu="@menu/top_menu"
-        app:itemBackground="@android:color/white"
-        />
-
 
 
     <ListView
         android:id="@+id/listview"
         android:visibility="visible"
         tools:listitem="@layout/daily_list_layout"
+        android:divider="@null"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toTopOf="@+id/storyedittext"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topNavigationView"
+        app:layout_constraintTop_toBottomOf="@id/view1"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
@@ -61,7 +51,7 @@
         android:id="@+id/storyedittext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:width="330dp"
+        android:width="260dp"
         android:height="55dp"
         android:hint="Add a history"
         app:layout_constraintTop_toBottomOf="@+id/listview"
@@ -72,11 +62,24 @@
         android:layout_marginStart="10dp"/>
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/CameraButton"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
         android:src="@drawable/camera"
         app:layout_constraintLeft_toRightOf="@id/storyedittext"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/CheckButton"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:src="@drawable/checkbutton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/CameraButton"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:layout_marginBottom="10dp"
         />
 
 

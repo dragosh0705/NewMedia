@@ -75,6 +75,8 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="italic"
+            android:maxLines="4"
+            android:ellipsize="end"
             app:layout_constraintBottom_toTopOf="@id/time"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

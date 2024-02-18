@@ -1,6 +1,7 @@
 package com.example.newmedia;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +22,7 @@ public class history1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.history1);
-        listview = findViewById(R.id.dailylistview);
+        listview = findViewById(R.id.listview);
         listadapter finallistadapter = new listadapter(history1.this, datetext, dailytext, dailyimg, timetext);
         listview.setAdapter(finallistadapter);
     }
